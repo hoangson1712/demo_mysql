@@ -1,0 +1,21 @@
+select * from employees order by last_name;
+
+select * from employees order by last_name desc;
+
+select * from employees order by last_name asc;
+
+select * from employees order by first_name;
+
+select * from employees order by first_name desc;
+
+select * from employees order by hire_date asc;
+
+select * from employees order by hire_date desc;
+
+select * from transactions;
+
+select * from transactions order by amount;
+
+select * from transactions order by amount,customer_id;
+
+select * from transactions order by amount asc,customer_id desc;

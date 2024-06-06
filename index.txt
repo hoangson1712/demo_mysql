@@ -1,0 +1,20 @@
+select * from transactions;
+
+select * from customers;
+
+show indexes from customers;
+
+create index last_name_idx
+on customers(last_name);
+
+select * from customers
+where last_name = "Puff";
+
+select * from customers
+where first_name = "Poppy";
+
+create index last_name_first_name_idx
+on customers(last_name,first_name);
+
+alter table customers 
+drop index last_name_idx;

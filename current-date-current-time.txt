@@ -1,0 +1,15 @@
+create table test(
+	my_date date,
+	my_time time,
+	my_datetime datetime
+);
+
+insert into test values(current_date(),current_time(),now());
+
+insert into test values(current_date() + 1,null,null);
+
+insert into test values(current_date() - 1,null,null);
+
+drop table test;
+
+select * from test;

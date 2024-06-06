@@ -1,0 +1,17 @@
+delete from employees;
+
+set autocommit = off;
+
+commit;
+
+delete from employees;
+
+rollback;
+
+delete from employees;
+
+commit;
+
+rollback;
+
+select * from employees;

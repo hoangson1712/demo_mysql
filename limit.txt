@@ -1,0 +1,23 @@
+select * from customers;
+
+select * from customers limit 1;
+
+select * from customers limit 2;
+
+select * from customers limit 3;
+
+select * from customers limit 4;
+
+select * from customers order by last_name limit 1;
+
+select * from customers order by last_name desc limit 1;
+
+select * from customers limit 1,1;
+
+select * from customers limit 2,1;
+
+select * from customers limit 3,1;
+
+select * from customers limit 10;
+
+select * from customers limit 10,10;

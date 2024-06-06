@@ -1,0 +1,9 @@
+update employees set hourly_pay = 10.25,hire_date = "2024-05-26" where employee_id = 6;
+
+update employees set hire_date = null where employee_id = 6;
+
+update employees set hourly_pay = 10.25;
+
+delete from employees;
+
+select * from employees;

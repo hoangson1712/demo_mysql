@@ -1,0 +1,20 @@
+insert into transactions (amount,customer_id) values (1.00,null);
+
+insert into customers (first_name,last_name) values ("Poppy","Puff");
+
+select * from customers;
+
+select *
+from transactions t inner join customers c on t.customer_id = c.customer_id;
+
+select t.transaction_id, t.amount, c.first_name, c.last_name 
+from transactions t inner join customers c on t.customer_id = c.customer_id;
+
+select *
+from transactions t left join customers c on t.customer_id = c.customer_id;
+
+select t.transaction_id, t.amount, c.first_name, c.last_name 
+from transactions t left join customers c on t.customer_id = c.customer_id;
+
+select *
+from transactions t right join customers c on t.customer_id = c.customer_id;

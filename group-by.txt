@@ -1,0 +1,57 @@
+select * from transactions;
+
+alter table transactions 
+add column order_date date;
+
+update transactions 
+set order_date = "2023-01-01"
+where transaction_id = 1000;
+
+update transactions 
+set order_date = "2023-01-01"
+where transaction_id = 1001;
+
+update transactions 
+set order_date = "2023-01-02"
+where transaction_id = 1002 or transaction_id = 1003;
+
+update transactions 
+set order_date = "2023-01-03"
+where transaction_id = 1004;
+
+insert into transactions 
+values (1005,2.49,4,"2023-01-03"),
+	   (1006,5.48,null,"2023-01-03");
+	   
+select * from transactions;
+
+select sum(amount), order_date
+from transactions 
+group by order_date;
+
+select max(amount), order_date
+from transactions 
+group by order_date;
+
+select min(amount), order_date
+from transactions 
+group by order_date;
+
+select avg(amount), order_date
+from transactions 
+group by order_date;
+
+select count(amount), order_date
+from transactions 
+group by order_date;
+
+select * from transactions;
+
+select sum(amount), customer_id
+from transactions
+group by customer_id;
+
+select count(amount), customer_id
+from transactions
+group by customer_id
+having count(amount) > 1 and customer_id is not null;

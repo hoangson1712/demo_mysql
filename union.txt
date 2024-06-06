@@ -1,0 +1,13 @@
+select * from employees;
+
+select * from customers;
+
+select first_name,last_name from employees union select first_name,last_name from customers;
+
+select first_name,last_name from employees union all select first_name,last_name from customers;
+
+insert into customers values (5,"Sheldon","Plankton");
+
+delete from customers where customer_id = 5;
+
+select * from customers;

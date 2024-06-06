@@ -1,0 +1,13 @@
+create table products (
+	product_id int,
+	product_name varchar(25) unique,
+	price decimal(4,2) not null
+);
+
+alter table products modify price decimal(4,2) not null;
+
+insert into products values (104,"cookie",null);
+
+insert into products values (104,"cookie",0);
+
+select * from products;

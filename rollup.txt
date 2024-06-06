@@ -1,0 +1,19 @@
+select * from transactions;
+
+select sum(amount), order_date
+from transactions
+group by order_date with rollup;
+
+select count(transaction_id), order_date
+from transactions
+group by order_date with rollup;
+
+select count(transaction_id) as "# of orders", customer_id
+from transactions
+group by customer_id with rollup;
+
+select * from employees;
+
+select sum(hourly_pay) as "hourly pay", employee_id
+from employees
+group by employee_id with rollup;
